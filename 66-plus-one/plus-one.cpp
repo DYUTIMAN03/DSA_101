@@ -11,7 +11,7 @@ public:
             else
                 digits[i] = 0;
         }
-        digits.insert(digits.begin(), 1);
+        digits.insert(digits.begin(), 1); //If all digits were 9, add a new leading 1
         return digits;
     }
 };
