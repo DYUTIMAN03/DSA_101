@@ -17,7 +17,7 @@ class Solution {
 public:
     void reverse(vector<int>& nums, int left, int right) {
         while (left < right) {
-            swap(nums[left], nums[right]);
+            swap(nums[left], nums[right]);                  //reverse fn
             left++;
             right--;
         }
