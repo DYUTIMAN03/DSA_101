@@ -1,39 +1,27 @@
 class Solution {
 public:
     bool isValid(string s) {
-
-        string st = "";
-
-        for(char c : s) {
-
-            // Opening bracket
-            if(c == '(' || c == '{' || c == '[') {
-                st.push_back(c);
+        
+        string st = "";                                      // acts like a stack
+        for(char c : s) {                                    // go through each bracket
+            if(c == '(' || c == '{' || c == '[') {           // opening bracket
+                st.push_back(c);                             // add it
             }
-
-            // Closing bracket
-            else {
-
-                // Nothing to match
-                if(st.empty())
+            else {                                           // closing bracket
+                if(st.empty())                                 // nothing to match
                     return false;
 
-                // Check matching pair
-                if(c == ')' && st.back() != '(')
+                if(c == ')' && st.back() != '(')             // ) needs (
                     return false;
 
-                if(c == '}' && st.back() != '{')
+                if(c == '}' && st.back() != '{')             // } needs {
                     return false;
 
-                if(c == ']' && st.back() != '[')
+                if(c == ']' && st.back() != '[')             // ] needs [
                     return false;
-
-                // Matching bracket found, remove it
-                st.pop_back();
+                st.pop_back();                               // remove matched bracket
             }
         }
-
-        // If nothing is left, everything matched
-        return st.empty();
+        return st.empty();                                   // true if everything matched
     }
 };
