@@ -8,14 +8,12 @@ public:
 
         // Build prefix maximum
         prefixMax[0] = nums[0];
-
         for (int i = 1; i < n; i++) {
             prefixMax[i] = max(prefixMax[i - 1], nums[i]);
         }
 
         // Build suffix minimum
         suffixMin[n - 1] = nums[n - 1];
-
         for (int i = n - 2; i >= 0; i--) {
             suffixMin[i] = min(suffixMin[i + 1], nums[i]);
         }
@@ -26,7 +24,6 @@ public:
                 return i;
             }
         }
-
         return -1;
     }
 };
