@@ -14,7 +14,7 @@ public:
                 mp[i+j].push_back(mat[i][j]);
             }
         }
-        bool flip = true;
+        bool flip = true; // initialize
         for(auto & it: mp){
             if(flip){
                 reverse(it.second.begin(), it.second.end());
