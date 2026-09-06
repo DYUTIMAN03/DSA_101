@@ -1,8 +1,8 @@
 class Solution {
 public:
-    typedef unsigned long long ull;
-    ull dp[1001][1001];
-    ull solve(string&s, string&t, int m, int n){
+    typedef unsigned long long abc;
+    abc dp[1001][1001];
+    abc solve(string&s, string&t, int m, int n){
         if(n==0) return dp[m][n] = 1;
         if(m==0) return dp[m][n] = 0;
 
