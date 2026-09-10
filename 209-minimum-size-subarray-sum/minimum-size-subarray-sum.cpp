@@ -6,7 +6,7 @@ public:
 
         int i=0, j=0;
         int sum=0;
-        int minL=n+1;
+        int minL=INT_MAX;
 
         while(j<n){
             sum+=nums[j];
@@ -18,6 +18,6 @@ public:
             }
             j++;
         }
-        return minL == n+1? 0 : minL;
+        return minL == INT_MAX? 0 : minL;
     }
 };
