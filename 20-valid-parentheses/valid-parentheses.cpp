@@ -10,13 +10,10 @@ public:
             else {                                           // closing bracket
                 if(st.empty())                                 // nothing to match
                     return false;
-
                 if(c == ')' && st.back() != '(')             // ) needs (
                     return false;
-
                 if(c == '}' && st.back() != '{')             // } needs {
                     return false;
-
                 if(c == ']' && st.back() != '[')             // ] needs [
                     return false;
                 st.pop_back();                               // remove matched bracket
