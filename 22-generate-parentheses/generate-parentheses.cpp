@@ -58,9 +58,7 @@ public:
     }
     vector<string> generateParenthesis(int n) {
         string curr = "";
-
         solve(n, curr, 0, 0);
-
         return result;
     }
 };
