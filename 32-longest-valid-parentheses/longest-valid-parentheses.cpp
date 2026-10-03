@@ -38,7 +38,6 @@ public:
         int close = 0;
 
         int result = 0;
-
         for(int i = 0; i < n; i++) {
             if(s[i] == '(') open++;
             else close++;
@@ -64,7 +63,6 @@ public:
                 close = 0;
             }
         }
-
         return result;
     }
 };
