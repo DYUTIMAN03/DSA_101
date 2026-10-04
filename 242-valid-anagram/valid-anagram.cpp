@@ -7,8 +7,7 @@
 //         if(s==t){
 //             return true;
 //         }
-//         return false;
-        
+//         return false; 
 //     }
 // };
 
@@ -32,9 +31,7 @@ public:
             if(count[i] != 0){
                 return false;
             }
-       
         }
         return true;
     }
-    
 };
