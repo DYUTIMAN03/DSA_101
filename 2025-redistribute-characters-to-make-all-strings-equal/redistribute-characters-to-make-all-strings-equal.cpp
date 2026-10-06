@@ -55,7 +55,6 @@ public:
         auto lambda = [&](int freq){
             return freq % n == 0;
         };
-
         return all_of(begin(count), end(count), lambda);
     }
 };
