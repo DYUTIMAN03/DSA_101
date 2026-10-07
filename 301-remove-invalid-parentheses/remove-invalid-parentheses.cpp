@@ -28,18 +28,14 @@ private:
             curr.pop_back();
             return;
         }
-
         //Do
         curr.push_back(s[i]);
-
         //Explore
         solve(s, i + 1, curr, count + (s[i] == '(' ? 1 : -1), maxLen);
-
         //Undo and explore
         curr.pop_back();
         solve(s, i + 1, curr, count, maxLen);
     }
-
 public:
     vector<string> removeInvalidParentheses(string s) {
         n = s.length();
