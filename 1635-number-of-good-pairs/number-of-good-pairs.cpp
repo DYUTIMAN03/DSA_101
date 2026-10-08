@@ -1,0 +1,61 @@
+//Approach-1 (Using simple double for loop and counting good pairs)
+//T.C : O(n^2)
+//S.C : O(1)
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) {
+        int n = nums.size();
+        int count = 0;
+        
+        for(int i = 0; i<n-1; i++) {
+            for(int j = i+1; j<n; j++) {
+                if(nums[j] == nums[i]) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
+
+/*
+
+//Approach-2 (Using hashmap)
+//T.C : O(n) - Two Times Traversing
+//S.C : O(1)
+
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) {
+        int result = 0;
+        unordered_map<int, int> mp;
+        
+        for(int &num : nums) {
+            mp[num]++;
+        }
+        for(auto &it : mp) {  
+            int count = it.second;
+            result += (count * (count-1))/2;  
+        }
+        return result;
+    }
+};
+
+//Approach-3 (Using hashmap)
+//T.C : O(n) - One Time Traversing
+//S.C : O(1)
+
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) {
+        int result = 0;
+        unordered_map<int, int> mp;
+        
+        for(int &num : nums) {
+            result += mp[num]++;
+        }
+        return result;
+    }
+};
+
+*/
