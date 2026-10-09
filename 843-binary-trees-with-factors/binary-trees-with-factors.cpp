@@ -16,9 +16,7 @@ public:
                 int v = arr[j];
 
                 // Check whether v and arr[i]/v can form the children
-                if(arr[i] % v == 0 &&
-                   mp.find(arr[i] / v) != mp.end()) {
-
+                if(arr[i] % v == 0 && mp.find(arr[i] / v) != mp.end()) {
                     // Left subtree ways * right subtree ways
                     count = (count + mp[v] * mp[arr[i] / v]) % MOD;
                 }
