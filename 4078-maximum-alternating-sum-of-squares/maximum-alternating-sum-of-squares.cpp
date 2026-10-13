@@ -19,8 +19,18 @@ public:
     }
 };
 
-
 /*
+Approach:
+1. Square every element.
+2. Sort the squared values.
+3. Add the larger half of the values.
+4. Subtract the sum of the smaller half.
+
+TC: O(n log n)
+SC: O(1) auxiliary space, excluding sorting stack space.
+*/
+
+/*----------------------------------------------------------------------------------------
 
 //Approach-2 (Square and partial-sort and pick larger and smaller)
 //T.C : Average O(n) because of nth_element
@@ -43,4 +53,16 @@ public:
     }
 };
 
+
+
+/*
+Approach:
+1. Square every element.
+2. Use nth_element to partition the array around its middle.
+3. Sum the larger partition and subtract the smaller partition.
+4. Sorting is avoided, making the average time complexity O(n).
+
+TC: Average O(n)
+SC: O(1) auxiliary space.
 */
+
