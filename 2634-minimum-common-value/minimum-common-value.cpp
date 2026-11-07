@@ -1,4 +1,6 @@
-// class Solution {
+// runtime error dera bruv
+
+//class Solution {
 // public:
 //     int getCommon(vector<int>& nums1, vector<int>& nums2) {
 //         int n = nums1.size();
