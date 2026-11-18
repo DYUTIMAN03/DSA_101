@@ -30,3 +30,29 @@ APPROACH:
 TC: O(log n)
 SC: O(1)
 */
+
+// class Solution {
+// public:
+//     int searchInsert(vector<int>& nums, int target) {
+//         int n = nums.size();
+
+//         for(int i = 0; i < n; i++) {
+//             if(nums[i] >= target) {
+//                 return i;
+//             }
+//         }
+
+//         return n;
+//     }
+// };
+
+/*
+APPROACH:
+1. Traverse the sorted array.
+2. Find the first element >= target.
+3. Return its index.
+4. If no element is >= target, return n.
+
+TC: O(n)
+SC: O(1)
+*/
