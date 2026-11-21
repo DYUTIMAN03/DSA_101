@@ -13,7 +13,8 @@ public:
             fast = fast->next->next;
         }
         prev->next = slow->next;
-
+        delete(slow);
+        
         return head;
     }
 };
