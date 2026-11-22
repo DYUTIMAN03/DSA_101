@@ -13,7 +13,7 @@ public:
             if(slow == fast)      //break only means stop the loop.
                 break;            //It does NOT necessarily mean a cycle was found.
         }
-        if(slow != fast) return NULL;
+        if(slow != fast) return NULL;  //cycle mila he nhi
 
         ListNode *P = head;
 
