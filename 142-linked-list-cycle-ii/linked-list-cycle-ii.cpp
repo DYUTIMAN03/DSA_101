@@ -10,10 +10,9 @@ public:
             slow = slow->next;
             fast = fast->next->next;
 
-            if(slow == fast) 
-                break;
+            if(slow == fast)      //break only means stop the loop.
+                break;            //It does NOT necessarily mean a cycle was found.
         }
-
         if(slow != fast) return NULL;
 
         ListNode *P = head;
