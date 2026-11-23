@@ -5,8 +5,6 @@ public:
     int n;
 
     ProductOfNumbers() {
-        nums.clear();
-        n = 0;
     }
 
     void add(int num) {
