@@ -12,7 +12,7 @@ public:
             for(int j = i; j < n; j++) {
 
                 // Prevent integer overflow
-                if(prod > 25200 / nums[j]) {
+                if(prod > 25200) {
                     break;
                 }
                 prod *= nums[j];
